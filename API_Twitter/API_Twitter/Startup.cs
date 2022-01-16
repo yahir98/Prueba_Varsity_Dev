@@ -1,7 +1,10 @@
+using API_Twitter.Core;
+using API_Twitter.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -28,10 +31,14 @@ namespace API_Twitter
         {
 
             services.AddControllers();
+            services.ConfigureEnvironmentVariables();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "API_Twitter", Version = "v1" });
             });
+
+            services.AddScoped<DbContext, twitterContext>();
+            services.AddScoped(typeof(Repository<>), typeof(GenericRepository<>));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
