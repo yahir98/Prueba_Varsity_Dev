@@ -11,7 +11,7 @@ namespace API_Twitter.Models
 
         [Key]
 
-        public Guid usuariood { get; set; }
+        public Guid usuarioid { get; set; }
 
         public string usuario { get; set; }
 
@@ -20,5 +20,7 @@ namespace API_Twitter.Models
         public string clave { get; set; }
 
         public DateTime fechacreacion { get; set; }
+
+        public string correo { get; set; }
     }
 }
