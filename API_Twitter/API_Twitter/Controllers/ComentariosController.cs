@@ -16,6 +16,43 @@ namespace API_Twitter.Controllers
     public class ComentariosController : Controller
     {
 
+        [HttpGet("{id}")]
+        public IActionResult Get([FromRoute] Guid id)
+        {
+            Respuesta MiRespusta = new Respuesta();
+
+
+
+
+            try
+            {
+
+                using (twitterContext db = new twitterContext())
+                {
+                    var contador = 0;
+                    var respository = new GenericRepository<comentarios>(db);
+                    var lst = respository.Queryable().Where(x => x.tweetid == id).ToList();
+                    MiRespusta.Exito = 1;
+                    contador = lst.Count();
+                    MiRespusta.Data = lst;
+
+
+                }
+
+            }
+
+            catch (Exception ex)
+            {
+                MiRespusta.Mensaje = ex.Message;
+            }
+
+            return Ok(MiRespusta);
+
+
+
+
+        }
+
         [HttpGet()]
         public IActionResult GetAll()
         {

@@ -7,12 +7,14 @@ import { ConteinerComponent } from './Components/conteiner/conteiner.component';
 import { TweetsComponent } from './Components/tweets/tweets.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ComentariosComponent } from './Components/comentarios/comentarios.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ConteinerComponent,
-    TweetsComponent
+    TweetsComponent,
+    ComentariosComponent
   ],
   imports: [
     BrowserModule,

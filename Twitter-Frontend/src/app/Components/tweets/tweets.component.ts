@@ -57,8 +57,7 @@ export class TweetsComponent implements OnInit {
       
       this.form.reset();
       this.recargar();
-      // this.tweets.recargar();
-      // this.modalService.dismissAll()
+   
 
     });
    
@@ -72,6 +71,14 @@ export class TweetsComponent implements OnInit {
       this.Mistweets=Mistweets
 
     })
+  }
+
+  mostrarComentarios(tweet:Tweet){
+
+    console.log("llego") 
+       tweet.mostrar=!tweet.mostrar;
+
+
   }
 
 }
