@@ -1,0 +1,57 @@
+<div class="fondo">
+    <div class="container" >
+      <div class="row" >
+        <div class="col-sm" > 
+          <ul class="list-unstyled">
+            <li class="media">
+    
+ 
+              <img src="https://img.icons8.com/color/70/000000/twitter--v1.png"/>
+            </li>
+            <br>
+    
+    
+    
+            <li class="media">
+    
+              <div class="media-body">
+    
+                <ng-template #content let-modal>
+    
+                  <div class="modal-header">
+                    <h4 class="modal-title"></h4>
+                   <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                      <span aria-hidden="true">&times;</span>
+                    </button> 
+                  </div>
+                  <div class="modal-body">
+                    <form novalidate [formGroup]="this.form">
+                      <textarea formControlName="tweet" placeholder="Lo que esta pasando?"
+                        class="form-control mr-auto"></textarea>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                
+                    <button type="button" class="btn btn-tweet" (click)="guardar()">Tweet</button>
+    
+                  </div>
+                </ng-template>
+               
+                <button class="btn btn-outline-primary mb-2 mr-2" (click)="openVerticallyCentered(content)"
+                  style="background-color: #55acee;">Nuevo tweet</button>
+              </div>
+    
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-sm" style="left: 350px;">
+          <br>
+            <button type="button" (click)="salir()" class="btn btn-outline-primary" style="background-color: #55acee;">Salir</button> 
+        </div>
+      </div>
+      
+    </div>
+    
+    </div>
+    
