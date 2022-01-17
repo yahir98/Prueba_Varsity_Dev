@@ -60,6 +60,7 @@ namespace API_Twitter.Models
                 entity.Property(x => x.usuarioid).HasColumnName("usuarioid");
                 entity.HasOne(x => x.usuario);
 
+
             });
 
             modelBuilder.Entity<comentarios>(entity =>

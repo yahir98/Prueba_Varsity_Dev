@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { environment } from 'src/environments/environment';
 import { Comentario, ResponseComentario } from '../Models/Comentarios.Model';
 import { IResponse } from '../Models/Tweet.Response.Model';
 
@@ -10,7 +11,7 @@ import { IResponse } from '../Models/Tweet.Response.Model';
 })
 export class ComentariosService {
 
-  url:string="https://localhost:44372/api"
+  url:string=environment.apiUrl;
   constructor(private http:HttpClient) { }
 
   GetComentarios(tweetId:string):Observable<Comentario[]>{

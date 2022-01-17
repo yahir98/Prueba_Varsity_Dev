@@ -5,13 +5,14 @@ import { map } from 'rxjs/operators';
 import { ResponseTweet, Tweet } from '../Models/Tweets.Model';
 import { IResponse } from '../Models/Tweet.Response.Model';
 import { Comentario } from '../Models/Comentarios.Model';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class TweetsService {
 
-  url:string="https://localhost:44372/api";
+  url:string=environment.apiUrl;
 
   constructor(private http:HttpClient) { }
 
@@ -28,7 +29,7 @@ export class TweetsService {
 
     let direccion=this.url+"/Tweets";
 
-    tweet.usuarioid="9baa0672-f167-4058-899a-32f6cbe15731";
+    tweet.usuarioid=localStorage.getItem("token");
 
     return this.http.post<IResponse>(direccion,tweet);
    }

@@ -1,0 +1,43 @@
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+      <!-- Tabs Titles -->
+  
+      <!-- Icon -->
+      <div class="fadeIn first">
+        <img src="https://img.icons8.com/cute-clipart/64/000000/twitter.png" />
+      </div>
+  
+      <!-- Login Form -->
+      <form [formGroup]="this.form" (ngSubmit)="onSubmit(content)">
+        <input type="text" id="login" class="fadeIn second" name="usuario" formControlName="usuario"
+          placeholder="Usuario" />
+        <input type="password" id="password" class="fadeIn third" name="clave" formControlName="clave"
+          placeholder="Clave" />
+        <input type="submit" class="fadeIn fourth" value="Iniciar sesión" />
+      </form>
+      <div align="left">
+        <a class="link-secondary">Credenciales:</a> <br />
+        <a class="link-secondary">Usuario: yahir &nbsp;</a><br />
+        <a class="link-secondary">Clave: 123456</a>
+      </div>
+  
+      <!-- Remind Passowrd -->
+      <div id="formFooter">
+        <a class="underlineHover">Varsity Dev Project</a>
+      </div>
+    </div>
+
+    <ng-template #content let-modal>
+    
+        <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Mensaje</h5>
+         <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+          </button> 
+        </div>
+        <div class="modal-body">
+            Credenciales Incorrectas...
+        </div>
+
+      </ng-template>
+  </div>

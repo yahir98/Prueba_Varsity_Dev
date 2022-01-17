@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { TweetsComponent } from '../tweets/tweets.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-conteiner',
@@ -9,7 +10,7 @@ import { TweetsComponent } from '../tweets/tweets.component';
 })
 export class ConteinerComponent implements OnInit {
 
-  constructor(private modalService: NgbModal) { }
+  constructor(private modalService: NgbModal,private router:Router) { }
 
   @ViewChild('tweet')
   tweets:TweetsComponent;
@@ -32,6 +33,8 @@ export class ConteinerComponent implements OnInit {
   }
 
   salir(){
+    this.router.navigate(['login']);
+    localStorage.removeItem('token')
 
   }
 

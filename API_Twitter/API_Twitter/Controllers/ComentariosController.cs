@@ -32,6 +32,7 @@ namespace API_Twitter.Controllers
                     var contador = 0;
                     var respository = new GenericRepository<comentarios>(db);
                     var lst = respository.Queryable().Where(x => x.tweetid == id).ToList();
+                  
                     MiRespusta.Exito = 1;
                     contador = lst.Count();
                     MiRespusta.Data = lst;

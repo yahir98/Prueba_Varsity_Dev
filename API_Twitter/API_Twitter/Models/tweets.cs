@@ -20,5 +20,6 @@ namespace API_Twitter.Models
 
        public usuarios usuario { get; set; }
 
+      
     }
 }

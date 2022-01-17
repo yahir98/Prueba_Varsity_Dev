@@ -100,7 +100,7 @@ export class ComentariosComponent implements OnInit {
 
     const model = {} as Comentario;
     model.texto = value.comentario;
-    model.usuarioid ="9baa0672-f167-4058-899a-32f6cbe15731";
+    model.usuarioid =localStorage.getItem('token');
     model.tweetId=this.tweetId;
 
     return model;

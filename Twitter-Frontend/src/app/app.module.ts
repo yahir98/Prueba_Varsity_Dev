@@ -9,13 +9,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ComentariosComponent } from './Components/comentarios/comentarios.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { LoginComponent } from './Components/login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ConteinerComponent,
     TweetsComponent,
-    ComentariosComponent
+    ComentariosComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
