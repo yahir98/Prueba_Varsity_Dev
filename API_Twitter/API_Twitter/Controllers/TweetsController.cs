@@ -69,6 +69,7 @@ namespace API_Twitter.Controllers
                     tweets.tweetid = Guid.NewGuid();
                     tweets.texto = TweetRequest.texto;
                     tweets.usuarioid = TweetRequest.usuarioid;
+                    tweets.fechacreacion = DateTime.Now;
 
                     reposity.Create(tweets);
                     Mirespuesta.Exito = 1;

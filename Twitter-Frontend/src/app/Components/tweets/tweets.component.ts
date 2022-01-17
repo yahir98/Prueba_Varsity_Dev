@@ -34,8 +34,44 @@ export class TweetsComponent implements OnInit {
   }
 
   guardar(){
+    const model = this.mapFormToModel();
+    var texto=this.form.getRawValue()
+    
+  this.registrar(model)
+    console.log(texto);
 
+  }
 
+  mapFormToModel(): Tweet {
+    const value = this.form.value;
+
+    const model = {} as Tweet;
+    model.texto = value.Tweet;
+
+    return model;
+  }  
+
+  registrar(model:Tweet){
+    this.api.Createweets(model).subscribe(response=>{
+
+      
+      this.form.reset();
+      this.recargar();
+      // this.tweets.recargar();
+      // this.modalService.dismissAll()
+
+    });
+   
+    
+  }
+
+  public recargar(){
+    this.api.GetTweets().subscribe(Mistweets=>{
+
+      console.log(Mistweets);
+      this.Mistweets=Mistweets
+
+    })
   }
 
 }
