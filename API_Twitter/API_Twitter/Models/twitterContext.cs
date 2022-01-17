@@ -37,9 +37,10 @@ namespace API_Twitter.Models
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            var schema = Environment.GetEnvironmentVariable("DB_SCHEMA");
             modelBuilder.HasAnnotation("Relational:Collation", "en_US.utf8");
 
-
+            modelBuilder.HasDefaultSchema(schema == null ? "public" : schema);
             modelBuilder.Entity<usuarios>(entity =>
             {
                 entity.ToTable("usuarios");

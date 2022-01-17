@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "oGlMdjmAvlNIdHdbSWlUJjBgE15d+0AFioCiqcXdg+x34dGky7IB3j886rZXumjGddNBaUbN7hwmfH91syT++g==",
+  "dgSpecHash": "wkK+Jm+tcBb4vcppdvFIHaxisbbgyrBJgzv9ajCoKGqMWsl0YmR/y3ertDTmHkBqgYGPU61bOcShA689opQfiw==",
   "success": true,
   "projectFilePath": "C:\\Users\\yahir\\Desktop\\Prueba_Varsity_Dev\\API_Twitter\\API_Twitter\\API_Twitter.csproj",
   "expectedPackageFiles": [
@@ -25,6 +25,7 @@
     "C:\\Users\\yahir\\.nuget\\packages\\microsoft.extensions.options\\5.0.0\\microsoft.extensions.options.5.0.0.nupkg.sha512",
     "C:\\Users\\yahir\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512",
     "C:\\Users\\yahir\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\yahir\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.11.1\\microsoft.visualstudio.azure.containers.tools.targets.1.11.1.nupkg.sha512",
     "C:\\Users\\yahir\\.nuget\\packages\\npgsql\\5.0.10\\npgsql.5.0.10.nupkg.sha512",
     "C:\\Users\\yahir\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\5.0.10\\npgsql.entityframeworkcore.postgresql.5.0.10.nupkg.sha512",
     "C:\\Users\\yahir\\.nuget\\packages\\swashbuckle.aspnetcore\\5.6.3\\swashbuckle.aspnetcore.5.6.3.nupkg.sha512",

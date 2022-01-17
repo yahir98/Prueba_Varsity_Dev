@@ -19,7 +19,7 @@ namespace API_Twitter.Controllers
         [HttpGet("{id}")]
         public IActionResult Get([FromRoute] Guid id)
         {
-            Respuesta MiRespusta = new Respuesta();
+           Respuesta MiRespusta = new Respuesta();
 
 
 
