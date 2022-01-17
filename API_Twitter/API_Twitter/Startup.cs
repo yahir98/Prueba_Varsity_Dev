@@ -51,16 +51,9 @@ namespace API_Twitter
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "API_Twitter v1"));
             }
 
-            app.UseHttpsRedirection();
+           // app.UseHttpsRedirection();
 
             app.UseRouting();
-
-            app.UseAuthorization();
-
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapControllers();
-            });
 
             app.UseCors(options =>
             {
@@ -70,6 +63,15 @@ namespace API_Twitter
                 options.AllowAnyMethod();
                 options.AllowAnyHeader();
             });
+
+            app.UseAuthorization();
+
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllers();
+            });
+
+          
         }
     }
 }

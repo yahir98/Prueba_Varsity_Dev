@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { TweetsComponent } from '../tweets/tweets.component';
 
 @Component({
   selector: 'app-conteiner',
@@ -9,6 +10,8 @@ export class ConteinerComponent implements OnInit {
 
   constructor() { }
 
+  @ViewChild('tweet')
+  tweets:TweetsComponent;
   ngOnInit(): void {
   }
 
