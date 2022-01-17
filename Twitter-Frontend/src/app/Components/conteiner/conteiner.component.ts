@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { TweetsComponent } from '../tweets/tweets.component';
 
 @Component({
@@ -8,7 +9,7 @@ import { TweetsComponent } from '../tweets/tweets.component';
 })
 export class ConteinerComponent implements OnInit {
 
-  constructor() { }
+  constructor(private modalService: NgbModal) { }
 
   @ViewChild('tweet')
   tweets:TweetsComponent;
@@ -17,6 +18,12 @@ export class ConteinerComponent implements OnInit {
 
   openVerticallyCentered(content) {
    
+
+   
+      this.modalService.open(content, { centered: true });
+    
+  
+
   }
 
   guardar(){

@@ -1,6 +1,8 @@
 export interface Tweet{
 
 
+  tweetid:string;
+  
     texto:string;
 
     fechacreacion:Date;

@@ -8,6 +8,7 @@ import { TweetsComponent } from './Components/tweets/tweets.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ComentariosComponent } from './Components/comentarios/comentarios.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { ComentariosComponent } from './Components/comentarios/comentarios.compo
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    NgbModule,
     ReactiveFormsModule
   ],
   providers: [],

@@ -118,5 +118,32 @@ namespace API_Twitter.Controllers
 
             return Ok(Mirespuesta);
         }
+
+        [HttpDelete("{id}")]
+
+        public IActionResult DeleteComentario([FromRoute] Guid id)
+        {
+
+            Respuesta Mirespuesta = new Respuesta();
+
+            try
+            {
+                using (twitterContext db = new twitterContext())
+                {
+
+                    var Repository = new GenericRepository<comentarios>(db);
+                    comentarios comentario = db.Comentarios.Find(id);
+                    Repository.ForceDelete(comentario);
+                    Mirespuesta.Exito = 1;
+                }
+            }
+            catch (Exception ex)
+            {
+                Mirespuesta.Mensaje = ex.Message;
+
+            }
+
+            return Ok(Mirespuesta);
+        }
     }
 }

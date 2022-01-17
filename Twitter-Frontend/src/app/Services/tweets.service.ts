@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { ResponseTweet, Tweet } from '../Models/Tweets.Model';
 import { IResponse } from '../Models/Tweet.Response.Model';
+import { Comentario } from '../Models/Comentarios.Model';
 
 @Injectable({
   providedIn: 'root'
@@ -31,4 +32,6 @@ export class TweetsService {
 
     return this.http.post<IResponse>(direccion,tweet);
    }
+
+  
 }
